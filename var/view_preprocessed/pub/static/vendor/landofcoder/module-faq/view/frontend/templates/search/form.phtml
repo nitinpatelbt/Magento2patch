@@ -1,0 +1,31 @@
+<?php /** * Landofcoder * * NOTICE OF LICENSE * * This source file is subject to the Landofcoder.com license that is * available through the world-wide-web at this URL: * https://landofcoder.com/terms * * DISCLAIMER * * Do not edit or add to this file if you wish to upgrade this extension to newer * version in the future. * * @category Landofcoder * @package Lof_Faq * @copyright Copyright (c) 2021 Landofcoder (https://www.landofcoder.com/) * @license https://landofcoder.com/terms */ $helper = $this->helper("Lof\Faq\Helper\Data"); $layout = $helper->getConfig("faq_page/layout_type"); $current_category = $helper->getCoreRegistry()->registry('current_faq_category'); $current_category_id = 0; if($current_category) { $current_category_id = $current_category->getId(); } ?> <div class="loffaq-search-wrapper"><div class="loffaq-search"><form method="post" id="faq-search" action="<?php echo $block->getUrl('loffaq/index/search') ?>" data-mage-init='{"validation":{}}'><div class="main-form"><input type="text" data-validate="{required:true}" name="s" class="faqkeyword" size="50" maxlength="50"></div><button class="btn-submit"><?php echo __('Search') ?></button> <img class="lofsearch-loader" src="<?php echo $this->getViewFileUrl('Lof_Faq/images/loading.svg'); ?>" alt="<?php echo __("Loading...") ?>"/><input type="hidden" name="catid" value="<?php echo $current_category_id?(int)$current_category_id:'0'; ?>"/></form></div><script type="text/javascript">
+		require(['jquery', 'mage/validation'], function($){
+			$('.faq-backpage').click(function(){
+				$('.faq-results').hide();
+				$('.lof-faq').show();
+				$(this).hide();
+			});
+			$('#faq-search').validation().submit(function(){
+				var keyword = $('.faqkeyword').val().trim();
+				var category_id = <?php echo $current_category_id?(int)$current_category_id:'0'; ?>;
+				if(keyword!=''){
+					$.ajax({
+						url: '<?php echo $block->getUrl('loffaq/index/search') ?>',
+						type: 'post',
+						data: { s : keyword, isAjax: true, catid : category_id },
+						dataType: 'json',
+						beforeSend: function() {
+							$('.lofsearch-loader').css("display","block");
+						},
+						success: function(result) {
+							console.log(result);
+							$('.lof-faq').hide();
+							$('.lofsearch-loader').css("display","none");
+							$('.faq-results').html('').html(result.html).show();
+							$('.faq-backpage').show();
+						}
+					});
+					return false;
+				}
+			});
+		});</script></div>

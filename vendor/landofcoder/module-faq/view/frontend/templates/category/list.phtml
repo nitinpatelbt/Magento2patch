@@ -1,0 +1,53 @@
+<?php
+/**
+ * Landofcoder
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Landofcoder.com license that is
+ * available through the world-wide-web at this URL:
+ * https://landofcoder.com/terms
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category   Landofcoder
+ * @package    Lof_Faq
+ * @copyright  Copyright (c) 2021 Landofcoder (https://www.landofcoder.com/)
+ * @license    https://landofcoder.com/terms
+ */
+
+$helper     = $this->helper("Lof\Faq\Helper\Data");
+$collection = $block->getCollection();
+$title      = $block->getData('title');
+$id         = rand() . time();
+?>
+<?php if(count($collection)>0) { ?>
+<div class="faqcategory-sidebar block">
+	<div class="block-title"><?php echo ($title)?$title:__('Category'); ?></div>
+	<ul id="faq-cats<?php echo $id ?>" class="faq-cats">
+		<?php echo $block->getCategoryHtml(); ?>
+	</ul>
+	<script type="text/javascript">
+		require([
+			'jquery',
+			<?php if($this->helper("Lof\All\Helper\Data")->getConfig("enable_bootstrap_js")): ?>
+			"Lof_All/lib/bootstrap/js/bootstrap.min"
+		<?php endif; ?>
+		], function(){
+			jQuery(document).ready(function($){
+				$('#faq-cats<?php echo $id ?> .opener').on('click', function(e) {
+					e.preventDefault();
+					var parent = $(this).parents("li").eq(0);
+					$(this).toggleClass('item-active');
+					$(parent).find(".children").eq(0).slideToggle();
+					return false;
+				});
+
+			});
+		});
+	</script>
+</div>
+<?php } ?>

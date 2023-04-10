@@ -1,0 +1,3 @@
+- upload app folder to your magento root folder
+- go to backend > MGS > Megamenu > Refresh Menu Cache
+- refresh Magento caches

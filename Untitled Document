@@ -1,0 +1,7 @@
+{
+    "patches": {
+      "paypal/module-braintree-core": {
+        "Fix Store Configuration Tab Issue": "patches/Fix_Store_Config_Issue.patch"
+      }
+    }
+  }

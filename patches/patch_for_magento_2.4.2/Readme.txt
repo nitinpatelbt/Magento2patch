@@ -1,0 +1,2 @@
+- upload app folder to your magento root folder
+- refresh Magento caches

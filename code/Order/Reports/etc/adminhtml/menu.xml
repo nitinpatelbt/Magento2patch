@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Order_Reports::parent" title="Reports" module="Order_Reports" sortOrder="100" resource="Order_Reports::parent"/>
+        <add id="Order_Reports::index" title="Reports Index" module="Order_Reports" sortOrder="10" action="reports/index" resource="Order_Reports::index" parent="Order_Reports::parent"/>
+		
+    </menu>
+</config>
