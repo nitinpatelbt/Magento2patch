@@ -1,0 +1,24 @@
+--- a/vendor/landofcoder/module-faq/etc/di.xml   2023-01-25 22:36:53.170211591 +0530
++++ b/vendor/landofcoder/module-faq/etc/di.xml   2022-09-12 14:45:06.000000000 +0530
+@@ -66,7 +66,7 @@
+             <argument name="filterPool" xsi:type="object" shared="false">FaqGirdFilterPool</argument>
+         </arguments>
+     </virtualType>
+-    <virtualType name="CategoryGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
++    <virtualType name="CategoryfaqGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+         <arguments>
+             <argument name="collection" xsi:type="object" shared="false">Lof\Faq\Model\ResourceModel\Category\Collection</argument>
+             <argument name="filterPool" xsi:type="object" shared="false">FaqGirdFilterPool</argument>
+
+--- a/vendor/landofcoder/module-faq/view/adminhtml/ui_component/faq_category_listing.xml
++++ b/vendor/landofcoder/module-faq/view/adminhtml/ui_component/faq_category_listing.xml 
+index 3c6c3ec6a..d35050797 100755
+@@ -36,7 +36,7 @@
+     </argument>
+     <dataSource name="faq_category_listing_data_source">
+         <argument name="dataProvider" xsi:type="configurableObject">
+-            <argument name="class" xsi:type="string">CategoryGridDataProvider</argument>
++            <argument name="class" xsi:type="string">CategoryfaqGridDataProvider</argument>
+             <argument name="name" xsi:type="string">faq_category_listing_data_source</argument>
+             <argument name="primaryFieldName" xsi:type="string">category_id</argument>
+             <argument name="requestFieldName" xsi:type="string">id</argument>
