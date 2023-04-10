@@ -66,7 +66,7 @@
             <argument name="filterPool" xsi:type="object" shared="false">FaqGirdFilterPool</argument>
         </arguments>
     </virtualType>
-    <virtualType name="CategoryGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+    <virtualType name="CategoryfaqGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
         <arguments>
             <argument name="collection" xsi:type="object" shared="false">Lof\Faq\Model\ResourceModel\Category\Collection</argument>
             <argument name="filterPool" xsi:type="object" shared="false">FaqGirdFilterPool</argument>
