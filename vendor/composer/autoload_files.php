@@ -373,6 +373,7 @@ return array(
     '87bb82aba4e6954227316088ec049d42' => $vendorDir . '/magento/module-translation/registration.php',
     '7adedf5aab7954091befcc50d50f5120' => $vendorDir . '/paypal/module-braintree-graph-ql/registration.php',
     'b3af4141c2b6c2616b0e9b1109f7c2dd' => $vendorDir . '/temando/module-shipping-remover/registration.php',
+    'f0776c07a20eb1116d39cc93bd82496c' => $vendorDir . '/landofcoder/module-all/registration.php',
     'c63d777742b9988dda52cb3a0755278e' => $vendorDir . '/magento/google-shopping-ads/registration.php',
     '4444551b69a588f0c3ae204e139ba1a0' => $vendorDir . '/magento/language-de_de/registration.php',
     '45575ff1060646888de912d9e76d5b9e' => $vendorDir . '/magento/language-en_us/registration.php',
@@ -490,9 +491,8 @@ return array(
     '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     'aa75ea0761a2f40c1f3b32ad314f86c4' => $vendorDir . '/phpseclib/mcrypt_compat/lib/mcrypt.php',
     '940abd8fb01ee76a36b44f35dcf9783b' => $vendorDir . '/weew/helpers-array/src/array.php',
-    'f0776c07a20eb1116d39cc93bd82496c' => $vendorDir . '/landofcoder/module-all/registration.php',
     '95f04a74e95d7823ebcc9b0e35db7e82' => $vendorDir . '/jetrails/magento2-cloudflare/registration.php',
-    'eda65932675b68b5aee4503e0762d64d' => $vendorDir . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php',
     'a4e1e96c267777d565701d8b7807425d' => $vendorDir . '/landofcoder/module-faq/registration.php',
+    'eda65932675b68b5aee4503e0762d64d' => $vendorDir . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php',
     'b4cf39431a4b949eea8aa69ebb3d39da' => $baseDir . '/app/etc/NonComposerComponentRegistration.php',
 );

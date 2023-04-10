@@ -330,7 +330,6 @@ return [
         'JetRails_Cloudflare' => 1,
         'Lof_All' => 1,
         'Lof_Faq' => 1,
-        'Order_Reports' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1

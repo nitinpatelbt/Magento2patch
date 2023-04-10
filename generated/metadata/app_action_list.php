@@ -1472,7 +1472,6 @@
   'magento\\wishlist\\controller\\shared\\wishlistprovider' => 'Magento\\Wishlist\\Controller\\Shared\\WishlistProvider',
   'magento\\wishlist\\controller\\wishlistprovider' => 'Magento\\Wishlist\\Controller\\WishlistProvider',
   'magento\\wishlist\\controller\\wishlistproviderinterface' => 'Magento\\Wishlist\\Controller\\WishlistProviderInterface',
-  'order\\reports\\controller\\adminhtml\\index\\index' => 'Order\\Reports\\Controller\\Adminhtml\\Index\\Index',
   'paypal\\braintree\\controller\\adminhtml\\configuration\\validate' => 'PayPal\\Braintree\\Controller\\Adminhtml\\Configuration\\Validate',
   'paypal\\braintree\\controller\\adminhtml\\payment\\getnonce' => 'PayPal\\Braintree\\Controller\\Adminhtml\\Payment\\GetNonce',
   'paypal\\braintree\\controller\\adminhtml\\report\\index' => 'PayPal\\Braintree\\Controller\\Adminhtml\\Report\\Index',
