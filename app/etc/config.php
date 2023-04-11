@@ -327,7 +327,7 @@ return [
         'Magento_Wishlist' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
-        'JetRails_Cloudflare' => 1,
+        'JetRails_Cloudflare' => 0,
         'Lof_All' => 1,
         'Lof_Faq' => 1,
         'PayPal_Braintree' => 1,
